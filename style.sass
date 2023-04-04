@@ -1,0 +1,568 @@
+@import "./_vars.sass"
+
+@font-face 
+    font-family: PublicSans
+    src: url("../PublicSans-VariableFont_wght.ttf")
+
+* 
+    box-sizing: border-box
+
+body 
+    margin: 0
+    font-family: PublicSans
+
+
+
+.menu
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: space-around
+    width: 100%
+    height: auto
+    background-color: $neutral--very-light-gray
+    padding: 0
+    z-index: 2
+
+    img
+        padding-left: 1rem
+
+    .invite-button
+        color: $neutral--grayish-blue
+        cursor: pointer
+        border: none
+        padding: .75rem 2rem
+        margin-right: 1rem
+        border-radius: 100vh
+        background-image: linear-gradient(to right, $primary--lime-green, $primary--bright-cyan)
+
+.pages
+    display: flex
+    padding: 2rem
+    padding-left: 7rem
+
+    ul 
+        display: flex
+        flex-direction: row
+        padding: 0
+        margin: 0
+        
+        a
+            all: unset
+            cursor: pointer
+    
+        li 
+            all: unset
+            margin: 1rem
+            padding: 0
+            text-decoration: none
+            margin: 0 1rem
+            color: gray
+
+            p
+                margin: 0
+
+
+.menu.open
+    background-image: linear-gradient(to bottom,$primary--dark-blue, hsla(233, 26%, 24%, 0%))
+    //box-shadow: 5rem 10rem 2rem black 
+
+.menu-elements
+    background-color: white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1rem
+
+.nav-menu
+    background-color: $neutral--very-light-gray
+    text-align: center
+    height: auto
+    padding: 1rem
+    margin: 1.5rem
+    border-radius: .3rem
+    z-index: 2
+    visibility: hidden
+    
+    ul
+        list-style: none
+        color: $primary--dark-blue
+        padding: 0
+
+    a 
+        text-decoration: none
+        all: unset
+        cursor: pointer
+
+.nav-menu.open
+    visibility: visible
+
+main  
+    overflow-x: hidden
+
+.background
+    position: relative
+
+.bg-img
+    position: absolute
+    z-index: -1
+    width: 100%
+
+    img
+        width: 100%
+
+.bg-mockups
+    position: relative //
+    height: auto
+    z-index: 0
+    width: 100% //
+
+.main-title
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+    h1
+        font-weight: $weight-light
+        text-align: center
+        position: relative
+        font-size: 2.5rem
+        color: $primary--dark-blue
+        margin-bottom: 0
+
+.main-title-description
+    text-align: center
+    margin: 1rem 2rem
+    font-size: 14px
+    color: $primary--dark-blue
+    font-weight: $weight-medium
+    line-height: 1.5rem
+    color: gray
+
+.main-title-button
+    border: none
+    color: white
+    cursor: pointer
+    margin-top: 1rem
+    margin-bottom: 4.5rem
+    padding: .75rem 2rem
+    border-radius: 5rem
+    background-image: linear-gradient(to right, $primary--lime-green, $primary--bright-cyan)
+
+.section-title-container
+    padding: 0 2rem 2rem
+    
+
+.section-container
+    padding: 3.5rem 0
+    margin: 0
+    font-size: 15px
+    font-weight: $weight-light
+    background-color: $neutral--grayish-blue
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    z-index: -1
+
+.section-title 
+    padding: 1.5rem
+    padding-bottom: 0
+    margin: 0
+    color: $primary--dark-blue
+    font-weight: $weight-light
+
+.section-description
+    margin: 0
+    padding: 1.5rem
+    padding-bottom: 2rem
+    color: gray
+    font-weight: $weight-medium
+    line-height: 1.5rem
+
+.latest-articles
+    background-color: $neutral--very-light-gray
+    display: flex
+    flex-direction: column
+    
+    h1 
+        text-align: center
+        padding-top: 4rem
+        font-weight: $weight-light
+        color: $primary--dark-blue
+        margin-bottom: 0
+
+.article 
+    background-color: white
+    margin: 2rem
+    margin-bottom: 0
+    border-radius: .75rem
+    border--radius: .25rem
+
+    img
+        width: 100%
+        border-top-left-radius: .25rem
+        border-top-right-radius: .25rem
+
+    .article-content
+        margin: 2rem
+        margin-top: 1.5rem
+        margin-bottom: 3rem
+
+    .article-author
+        font-size: .65rem
+        font-weight: $weight-light
+        color: gray
+
+    .article-title
+        font-size: 1rem
+        color: $primary--dark-blue
+        font-weight: $weight-medium
+
+    .article-description
+        font-size: .8rem
+        color: gray
+        margin: 0
+
+.footer
+    text-align: center
+    color: $neutral--grayish-blue
+    background-color: $primary--dark-blue
+    padding-top: 2.5rem
+    font-weight: 200
+    font-size: .75rem
+
+    .socials
+        margin: 1.5rem
+
+    .socials img
+        margin: .4rem
+
+    img
+        mix-blend-mode: plus-lighter
+
+    ul
+        list-style: none
+        padding: 0
+
+    a
+        all: unset
+        margin: 0
+        cursor: pointer
+
+    .footer-button 
+        color: $neutral--grayish-blue
+        border: none
+        margin: 1.5rem
+        margin-bottom: 1rem
+        padding: .75rem 2rem
+        border-radius: 100vh
+        background-image: linear-gradient(to right, $primary--lime-green, $primary--bright-cyan)
+    
+    .footer-rights
+        padding: 3rem
+        padding-top: 0
+        color: gray
+        margin-bottom: 0
+        font-weight: $weight-medium
+
+@media (max-width: 50rem) 
+
+    header
+        padding: 1rem 0
+        background: $neutral--very-light-gray
+        position: relative
+
+    .menu-btn 
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 2rem
+        height: 2rem
+        margin-right: 1rem
+        cursor: pointer
+        transition: all .5s ease-in-out
+        order: 1
+
+    .menu-btn--burger 
+        width: 1.5rem
+        height: .1rem
+        background: black
+        border-radius: 5px
+        transition: all .5s ease-in-out
+
+    .menu-btn--burger::before,
+    .menu-btn--burger::after 
+        content: ''
+        position: absolute
+        width: 1.5rem
+        height: .1rem
+        background: black
+        border-radius: 5px
+        transition: all .5s ease-in-out
+
+    .menu-btn--burger::before 
+        transform: translateY(-.4rem)
+
+    .menu-btn--burger::after 
+        transform: translateY(.4rem)
+
+    /* ANIMATION */
+    .menu-btn.open .menu-btn--burger 
+        transform: translateX(-50px)
+        background: transparent
+
+    .menu-btn.open .menu-btn--burger::before 
+        transform: rotate(45deg) translate(35px, -35px)
+
+    .menu-btn.open .menu-btn--burger::after 
+        transform: rotate(-45deg) translate(35px, 35px)
+
+
+    .invite-button
+        visibility: hidden
+
+    .nav-menu
+        visibility: visible
+
+    .pages
+        display: flex
+        justify-content: center
+        text-align: center
+        background-color: black
+        position: absolute
+        top: 4rem
+        background-color: $neutral--very-light-gray
+        width: calc(100% - 3rem)
+        margin: 1rem
+        border-radius: 0.5rem
+        box-shadow: 0 0 4rem $primary--dark-blue
+        visibility: hidden
+        padding-left: 2rem
+
+        & ul
+            display: flex
+            flex-direction: column
+            li
+                padding: .5rem
+
+    .pages.open
+        visibility: visible
+
+@media (min-width: 50rem) 
+
+    .bg-img
+        position: absolute
+        left: -10rem
+        top: -15.5rem
+        z-index: -1
+
+        img
+            width: auto
+
+    .bg-mockups
+        position: absolute
+        top: -7.5rem
+        left: 1rem
+        height: auto
+        z-index: 0
+        width: auto
+
+
+    .background
+        position: relative
+        height: 43.5rem
+        width: 50%
+        order: 2
+        
+    //     width: auto
+    //     height: auto
+    //     margin-top: auto
+    //     z-index: -1
+    //     order: 2
+    //     width: 50rem
+    //     height: 50rem
+
+    // .bg-img
+    //     position: relative
+    //     content: url("../images/bg-intro-desktop.svg")
+    //     t-op: 0
+    //     right: -60.5%
+    //     width: 150%
+    //     height: auto
+
+    // .bg-mockups
+    //     position: relative
+    //     width: auto
+    //     height: auto
+    //     right: 17.5rem
+
+    .main-title
+        order: 1
+        align-items: flex-start
+        margin: 12rem
+        width: 25%
+        scale: 120%
+        // margin: 8rem
+
+        h1
+            font-weight: $weight-light
+            text-align: left
+            position: relative
+            font-size: 2.5rem
+            color: $primary--dark-blue
+            margin-bottom: 1rem
+
+        p 
+            margin: 0
+
+    .main--title-container
+        display: flex
+        flex-direction: row
+
+    .main-title-description
+        text-align: left
+        font-size: 14px
+        color: $primary--dark-blue
+        font-weight: $weight-medium
+        line-height: 1.5rem
+        color: gray
+
+    .main-title-button
+        border: none
+        color: white
+        margin-top: 2rem
+        border-radius: 5rem
+        background-image: linear-gradient(to right, $primary--lime-green, $primary--bright-cyan)
+
+    .section-title-container
+        display: flex
+        flex-direction: column
+        padding: 2rem 7rem
+    
+
+    .section-items
+        display: flex
+        flex-direction: row
+        padding: 0 7rem
+
+    .section-container
+        padding: 3.5rem 0
+        margin: 0
+        font-size: 15px
+        font-weight: $weight-light
+        background-color: $neutral--grayish-blue
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        text-align: left
+        z-index: -1
+
+        img
+            margin-left: 1.5rem
+
+    .section-title 
+        padding: 1.5rem
+        padding-bottom: 0
+        margin: 0
+        color: $primary--dark-blue
+        font-weight: $weight-light
+        text-align: left
+
+    .section-description
+        margin: 0
+        width: 70%
+        padding: 1.5rem
+        padding-bottom: 2rem
+        color: gray
+        font-weight: $weight-medium
+        line-height: 1.5rem
+
+    .latest-articles
+        background-color: $neutral--very-light-gray
+        display: flex
+        flex-direction: column
+        padding-bottom: 3rem
+    
+        h1 
+            text-align: left
+            padding-top: 4rem
+            font-weight: $weight-light
+            color: $primary--dark-blue
+            margin-bottom: 2rem
+            margin-left: 8rem
+
+
+    .articles-wrapper
+        display: flex
+        flex-direction: row
+        margin: 0 7rem
+
+    .article 
+        margin: 1rem
+
+        img
+            width: 100%
+            border-top-left-radius: .25rem
+            border-top-right-radius: .25rem
+
+    .footer
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        text-align: left
+        padding: 4rem 8rem //
+
+        .footer-imgs
+            display: flex
+            flex-direction: column
+
+        .socials
+            margin: 1.5rem
+
+        .socials img
+            flex-direction: column
+            margin: .4rem
+
+        img
+            mix-blend-mode: plus-lighter
+
+        ul
+            position: relative
+            left: -10rem
+            display: flex
+            flex-flow: column wrap
+            max-height: 150px
+            gap: 0 70px
+            list-style: none
+            scale: 1.4
+
+        a
+            all: unset
+            margin: 0
+            cursor: pointer
+
+        .footer-button 
+            color: $neutral--grayish-blue
+            border: none
+            cursor: pointer
+            margin: 1.5rem
+            margin-bottom: 1rem
+            padding: .75rem 2rem
+            border-radius: 100vh
+            background-image: linear-gradient(to right, $primary--lime-green, $primary--bright-cyan)
+        
+        .footer-rights
+            padding: 3rem
+            padding-top: 0
+            color: gray
+            margin-bottom: 0
+            font-weight: $weight-medium
+
+        .footer-info
+            justify-content: center
+            align-content: center
+            text-align: end
